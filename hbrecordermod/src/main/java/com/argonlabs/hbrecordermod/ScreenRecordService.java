@@ -132,7 +132,7 @@ public class ScreenRecordService extends Service {
         }
         //Set notification description if developer did not
         if (notificationDescription == null || notificationDescription.equals("")) {
-            notificationDescription = "Drag down to stop creating your Chat Story.";
+            notificationDescription = "We are creating your chat Story.";
         }
 
         //Notification
@@ -376,6 +376,7 @@ public class ScreenRecordService extends Service {
         fileName = name + ".mp4";
 
         mMediaRecorder = new MediaRecorder();
+        mMediaRecorder.setVideoSize(400, 224);
 
 
         if (isAudioEnabled) {
