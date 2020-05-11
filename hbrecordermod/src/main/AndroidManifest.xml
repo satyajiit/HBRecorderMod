@@ -3,11 +3,9 @@
     package="com.argonlabs.hbrecordermod">
 
     <application
-        android:requestLegacyExternalStorage="true"
         tools:targetApi="q">
 
         <service android:name="com.argonlabs.hbrecordermod.ScreenRecordService"
-            android:foregroundServiceType="mediaProjection"
             tools:targetApi="q" />
 
         <receiver android:name="com.argonlabs.hbrecordermod.NotificationReceiver"/>
