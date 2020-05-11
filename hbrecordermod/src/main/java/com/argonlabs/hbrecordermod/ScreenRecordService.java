@@ -376,7 +376,6 @@ public class ScreenRecordService extends Service {
         fileName = name + ".mp4";
 
         mMediaRecorder = new MediaRecorder();
-        mMediaRecorder.setVideoSize(400, 224);
 
 
         if (isAudioEnabled) {
@@ -392,7 +391,8 @@ public class ScreenRecordService extends Service {
 
         mMediaRecorder.setVideoEncoder(videoEncoderAsInt);
         mMediaRecorder.setOutputFile(path + "/" + name + ".mp4");
-        mMediaRecorder.setVideoSize(mScreenWidth, mScreenHeight);
+        //mMediaRecorder.setVideoSize(mScreenWidth, mScreenHeight);
+        mMediaRecorder.setVideoSize(400, 224);
 
         if (!isCustomSettingsEnabled) {
             if (!isVideoHD) {
